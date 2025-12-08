@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----- Global Styles ----- */
+html, body {
+  background-color: #fafafa; /* soft neutral background */
+  color: #333; /* soft text */
+  font-family: 'Inter', sans-serif;
+  min-height: 100%;
+}
+
+:root {
+  --mint-50: #f1f9f7;
+  --mint-100: #d9f2eb;
+  --mint-200: #bce5d9;
+  --mint-300: #9dd8c7;
+  --mint-400: #7ecbb6;
+  --mint-500: #5fbfa4; /* main mint */
+  --mint-600: #4aa790;
+  --mint-700: #3a8b78;
+  --mint-800: #2a6f60;
+  --mint-900: #1b5348;
+}
+
+/* Smooth transitions globally */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
