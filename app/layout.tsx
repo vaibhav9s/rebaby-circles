@@ -1,6 +1,7 @@
 import "./globals.css";
 import Footer from "@/components/ui/Footer";
 import { Inter } from "next/font/google";
+import { CartProvider } from "@/context/CartContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +22,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={inter.className + " bg-fafafa"}>
-        {children}
-        <Footer />
+        {/* ✅ CartProvider added here */}
+        <CartProvider>
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
