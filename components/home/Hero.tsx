@@ -24,8 +24,8 @@ export default function Hero() {
         </p>
 
         <div className="flex justify-center gap-4 mt-6">
-          <Link href="/shop">
-            <Button>Shop Baby Items</Button>
+          <Link href="/shop/shirts">
+            <Button>Shop Baby Clothes</Button>
           </Link>
           <Link href="/donate">
             <Button className="bg-pink-400 hover:bg-pink-500">
