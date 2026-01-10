@@ -24,12 +24,12 @@ export default function Hero() {
         </p>
 
         <div className="flex justify-center gap-4 mt-6">
-          <Link href="/shop/shirts">
+          <Link href="#featured">
             <Button>Shop Baby Clothes</Button>
           </Link>
           <Link href="/donate">
             <Button className="bg-pink-400 hover:bg-pink-500">
-              Donate Pre-Loved Items
+              Book a Free Pickup
             </Button>
           </Link>
         </div>

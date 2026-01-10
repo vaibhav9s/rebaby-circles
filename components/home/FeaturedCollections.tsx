@@ -19,12 +19,12 @@ export default function FeaturedCollections() {
     {
       title: "Baby Dresses",
       img: "/images/dresses.jpg",
-      href: "/shop/dresses",
+      href: "#featured",
     },
   ];
 
   return (
-    <Section>
+    <Section id="featured">
       <Container>
         <SectionTitle title="Featured Collections" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -2,6 +2,8 @@
 
 import { useCart } from "@/context/CartContext";
 import Link from "next/link";
+import { useState } from "react";
+import Button from "@/components/ui/Button";
 
 const shirts = [
   {
@@ -20,6 +22,16 @@ const shirts = [
 
 export default function OnesiesPage() {
   const { addToCart } = useCart();
+  const [showToast, setShowToast] = useState(false);
+
+  const handleAddToCart = (item: any) => {
+    addToCart(item);
+    setShowToast(true);
+
+    setTimeout(() => {
+      setShowToast(false);
+    }, 2000);
+  };
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-10">
@@ -38,7 +50,7 @@ export default function OnesiesPage() {
             <p className="text-gray-600">€{shirt.price}</p>
 
             <button
-              onClick={() => addToCart(shirt)}
+              onClick={() => handleAddToCart(shirt)}
               className="mt-3 w-full bg-black text-white py-2 rounded-lg"
             >
               Add to Cart
@@ -48,9 +60,19 @@ export default function OnesiesPage() {
       </div>
 
       <Link href="/shop/cart" className="inline-block mt-8 underline">
-        Go to Cart →
+        <Button className="bg-pink-400 hover:bg-pink-500">
+          Go to Cart
+        </Button>
       </Link>
+
+      {/* Toast popup */}
+      {showToast && (
+        <div className="fixed top-6 right-6 z-50 w-[90%] max-w-sm">
+          <div className="bg-green-500 text-white px-6 py-4 rounded-xl shadow-xl text-lg font-semibold">
+            ✅ Item added to cart
+          </div>
+        </div>
+      )}
     </div>
   );
 }
-

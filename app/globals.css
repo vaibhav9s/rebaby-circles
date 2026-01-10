@@ -12,6 +12,10 @@ html, body {
   min-height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --mint-50: #f1f9f7;
   --mint-100: #d9f2eb;
