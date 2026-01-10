@@ -10,7 +10,7 @@ export default function PickupPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    router.push("/pickup/success");
+    router.push("/donate/success");
   };
 
   return (
